@@ -10,8 +10,8 @@ services:
       context: .
     image: invoiceninja/invoiceninja-debian:${TAG:-latest}
     restart: unless-stopped
-    env_file:
-      - ./.env
+    # env_file:
+    #   - ./.env
     volumes:
       - ./.env:/var/www/html/.env
       # - ./php/php.ini:/usr/local/etc/php/conf.d/invoiceninja.ini:ro
@@ -46,8 +46,8 @@ services:
   mysql:
     image: mysql:8
     restart: unless-stopped
-    env_file:
-      - ./.env
+    # env_file:
+    #   - ./.env
     environment:
       MYSQL_DATABASE: ${DB_DATABASE}
       MYSQL_USER: ${DB_USERNAME}
