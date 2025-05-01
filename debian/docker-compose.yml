@@ -80,6 +80,7 @@ services:
       - app_storage:/var/www/html/storage:ro
     networks:
       - app-network
+      - dokploy-network
     depends_on:
       - app
     logging: *default-logging
