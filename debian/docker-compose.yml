@@ -129,6 +129,8 @@ services:
 networks:
   app-network:
     driver: bridge
+  dokploy-network:
+    external: true
 
 volumes:
   app_public:
