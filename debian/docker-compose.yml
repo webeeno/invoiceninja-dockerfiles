@@ -80,6 +80,8 @@ services:
       - ./nginx:/etc/nginx/conf.d:ro
       - app_public:/var/www/html/public:ro
       - app_storage:/var/www/html/storage:ro
+    ports:
+      - "8008:8008"
     networks:
       - app-network
     depends_on:
