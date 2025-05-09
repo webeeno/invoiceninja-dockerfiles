@@ -70,7 +70,8 @@ services:
     logging: *default-logging
 
   nginx:
-    image: nginx:alpine
+    build:
+      context: ./nginx
     restart: unless-stopped
     labels:
       - "traefik.enable=true"
