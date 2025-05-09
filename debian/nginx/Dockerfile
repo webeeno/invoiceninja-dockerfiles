@@ -4,6 +4,6 @@ FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
 
 COPY ./invoiceninja.conf /etc/nginx/conf.d/default.conf
-COPY ./files/ /usr/share/nginx/html
+COPY ../docker/app /usr/share/nginx/html
 
 EXPOSE 8008
